@@ -37,7 +37,7 @@ nav{display:flex;align-items:center;gap:30px}
 
 /* Shared */
 section{scroll-margin-top:88px}
-.section-inner{padding:72px 0 84px}
+.section-inner{padding-top:72px;padding-bottom:84px}
 h1{font-size:52px;line-height:1.15;font-weight:600;letter-spacing:-.02em;margin:22px 0 26px -3px;max-width:23ch;text-wrap:pretty}
 h2{font-size:32px;font-weight:600;letter-spacing:-.015em;margin:0 0 22px -2px;text-wrap:pretty}
 .kicker{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
@@ -69,7 +69,7 @@ h2{font-size:32px;font-weight:600;letter-spacing:-.015em;margin:0 0 22px -2px;te
 
 /* Netzwerk */
 .netzwerk{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.netzwerk .section-inner{padding:56px 0 62px}
+.netzwerk .section-inner{padding-top:56px;padding-bottom:62px}
 .cols-2{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:820px}
 .col-card{border-top:1px solid var(--ink);padding-top:16px;display:flex;flex-direction:column;gap:8px}
 .col-card .body{font-size:16px;line-height:1.62;color:var(--body)}
@@ -103,12 +103,12 @@ h2{font-size:32px;font-weight:600;letter-spacing:-.015em;margin:0 0 22px -2px;te
 .form-footer .btn-primary{border:0;cursor:pointer;font-family:inherit}
 .form-hinweis{font-size:13.5px;line-height:1.5;color:var(--muted);max-width:420px}
 .form-alt{font-size:16px;color:var(--body);margin:30px 0 0}
-#danke{display:none;max-width:700px;background:var(--bg-alt);border:1px solid var(--line);border-left:3px solid var(--accent);padding:16px 20px;font-size:16px;color:var(--body);margin:0 0 30px}
-#danke:target{display:block}
+#danke,#fehler{max-width:700px;background:var(--bg-alt);border:1px solid var(--line);border-left:3px solid var(--accent);padding:16px 20px;font-size:16px;color:var(--body);margin:0 0 30px}
+#fehler{border-left-color:#8C2F2F;margin:26px 0 0}
 
 /* Legal sections (in-page, toggled via footer) */
 [hidden]{display:none !important}
-.legal-inner{padding:64px 0 76px}
+.legal-inner{padding-top:64px;padding-bottom:76px}
 .legal-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin:0 0 10px}
 .legal-close{font-size:14.5px;color:#4A4841;text-decoration:none;white-space:nowrap}
 .legal-close:hover{color:var(--accent)}
@@ -119,7 +119,7 @@ h2{font-size:32px;font-weight:600;letter-spacing:-.015em;margin:0 0 22px -2px;te
 
 /* Footer */
 footer{border-top:1px solid var(--line)}
-.footer-inner{padding:26px 0;display:flex;align-items:baseline;justify-content:flex-end;gap:16px;flex-wrap:wrap}
+.footer-inner{padding-top:26px;padding-bottom:26px;display:flex;align-items:baseline;justify-content:flex-end;gap:16px;flex-wrap:wrap}
 .footer-links{display:flex;gap:24px}
 .footer-links a{font-size:14px;color:#4A4841;text-decoration:none}
 .footer-links a:hover{color:var(--accent)}
@@ -130,14 +130,14 @@ footer{border-top:1px solid var(--line)}
   h1{font-size:clamp(32px,7.5vw,44px)}
   h2{font-size:27px}
   .hero{padding:64px 0 60px}
-  .section-inner{padding:56px 0 60px}
+  .section-inner{padding-top:56px;padding-bottom:60px}
   .steps{grid-template-columns:1fr;gap:26px}
   .cols-2{grid-template-columns:1fr;gap:28px}
   .inst-cols{grid-template-columns:1fr;gap:36px}
   .form-grid{grid-template-columns:1fr;gap:18px}
   .legal-grid{grid-template-columns:1fr;gap:8px 0}
   .legal-grid > div:not(.legal-label){margin-bottom:16px}
-  .legal-inner{padding:48px 0 56px}
+  .legal-inner{padding-top:48px;padding-bottom:56px}
 }
 @media (max-width:720px){
   .nav-link{display:none}
@@ -170,7 +170,7 @@ footer{border-top:1px solid var(--line)}
     -->
     <p class="lead">Ich berate Insolvenzverwalter, Debt Advisory Firmen und Private Equity bei der Finanzierung ihrer Mandate: Ich stelle Kontakte her, verhandle die Finanzengagements und unterstütze bei der Implementierung. Zuvor habe ich ein Hamburger Factoring-Institut mit BaFin-Erlaubnis in den Funktionen Risikomanagement, Risikocontrolling, Interne Revision, Anti Financial Crime und Regulatory Compliance aufgebaut - heute berate ich Finanzinstitute genau in diesen Bereichen.</p>
     <div class="hero-ctas">
-      <a class="btn-primary" href="#kontakt" data-betreff="fallvorstellung">Kontakt aufnehmen</a>
+      <a class="btn-primary" href="#kontakt">Kontakt aufnehmen</a>
       <a class="hero-sec" href="#institute">Für Institute ↓</a>
     </div>
   </div>
@@ -213,7 +213,7 @@ footer{border-top:1px solid var(--line)}
       </div>
     </div>
     <div style="margin-top:46px">
-      <a class="link-cta" href="#kontakt" data-betreff="fallvorstellung">Fall vertraulich vorstellen →</a>
+      <a class="link-cta" href="#kontakt">Fall vertraulich vorstellen →</a>
     </div>
   </div>
 </section>
@@ -234,7 +234,7 @@ footer{border-top:1px solid var(--line)}
     </div>
     <div class="inline-row">
       <span class="plain">Aufnahme nach persönlichem Gespräch.</span>
-      <a class="link-cta" href="#kontakt" data-betreff="netzwerk">Kontakt aufnehmen →</a>
+      <a class="link-cta" href="#kontakt">Kontakt aufnehmen →</a>
     </div>
   </div>
 </section>
@@ -260,7 +260,7 @@ footer{border-top:1px solid var(--line)}
       </div>
     </div>
     <div style="margin-top:46px">
-      <a class="link-cta" href="#kontakt" data-betreff="interim">Anfrage stellen →</a>
+      <a class="link-cta" href="#kontakt">Anfrage stellen →</a>
     </div>
   </div>
 </section>
@@ -281,12 +281,12 @@ footer{border-top:1px solid var(--line)}
   <div class="wrap section-inner">
     <h2>Kontakt</h2>
     <p class="copy" style="margin-bottom:34px">Eine kurze Nachricht mit einer Fallübersicht genügt. Vertraulichkeit ist selbstverständlich; auf Wunsch schließen wir vor Detailgesprächen eine Vertraulichkeitsvereinbarung.</p>
-    <div id="danke">Vielen Dank für Ihre Nachricht - ich melde mich zeitnah bei Ihnen.</div>
-    <form class="kontakt-form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="ENTFERNT-WEB3FORMS-KEY">
-      <input type="hidden" name="subject" value="Neue Anfrage über h-don.de">
-      <input type="hidden" name="from_name" value="h-don.de Kontaktformular">
-      <input type="hidden" name="redirect" value="https://h-don.de/#danke">
+    <div id="danke" hidden>Vielen Dank für Ihre Nachricht - ich melde mich zeitnah bei Ihnen.</div>
+    <!-- Kontaktformular: statisches Formular, Submission per fetch an die HubSpot Forms API
+         (kein Embed-Script, kein hubspotutk-Cookie; hutk wird bewusst nicht mitgesendet).
+         HubSpot-Formular: Portal 148321681, Form-GUID 899cf51d-01e0-4478-83f9-d83457cd53a9
+         (Felder: email, firstname, lastname, message). Ausstehend: DSE-Variante A veröffentlichen. -->
+    <form id="kontakt-form" class="kontakt-form" hidden>
       <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
       <div class="form-grid">
         <div class="form-field">
@@ -297,19 +297,6 @@ footer{border-top:1px solid var(--line)}
           <label for="kf-email">E-Mail*</label>
           <input id="kf-email" type="email" name="email" required autocomplete="email">
         </div>
-        <div class="form-field">
-          <label for="kf-firma">Unternehmen / Kanzlei</label>
-          <input id="kf-firma" type="text" name="unternehmen" autocomplete="organization">
-        </div>
-        <div class="form-field">
-          <label for="kf-betreff">Betreff</label>
-          <select id="kf-betreff" name="betreff">
-            <option value="Fallvorstellung (vertraulich)">Fallvorstellung (vertraulich)</option>
-            <option value="Netzwerk">Netzwerk</option>
-            <option value="Interim-Geschäftsleitung / Beratung">Interim-Geschäftsleitung / Beratung</option>
-            <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
-          </select>
-        </div>
         <div class="form-field form-field-full">
           <label for="kf-nachricht">Nachricht*</label>
           <textarea id="kf-nachricht" name="nachricht" rows="6" required></textarea>
@@ -319,11 +306,17 @@ footer{border-top:1px solid var(--line)}
         <button type="submit" class="btn-primary">Nachricht senden</button>
         <span class="form-hinweis">Mit dem Absenden werden Ihre Angaben zur Bearbeitung der Anfrage verarbeitet - Details in der <a href="#datenschutz" data-legal-open="datenschutz">Datenschutzerklärung</a>.</span>
       </div>
+      <div id="fehler" hidden>Das Senden hat leider nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie direkt an <a href="mailto:martin.nagelsdiek@h-don.de">martin.nagelsdiek@h-don.de</a>.</div>
     </form>
+    <noscript><p class="form-alt">Das Kontaktformular benötigt JavaScript - Sie erreichen uns direkt per E-Mail (Adresse unten).</p></noscript>
     <p class="form-alt">Oder direkt per E-Mail: <a href="mailto:martin.nagelsdiek@h-don.de">martin.nagelsdiek@h-don.de</a></p>
   </div>
 </section>
 
+<!-- TODO (geplant, Rework Impressum/Datenschutz - A14): Eigenständige Seiten /impressum.html und
+     /datenschutz.html ergänzen (zitierfähig, druckbar, indexierbar) oder mindestens Redirects auf
+     /#impressum bzw. /#datenschutz einrichten, damit extern gesetzte Alt-URLs nicht ins Leere laufen.
+     Die Anker-Lösung selbst bleibt zulässig (§ 5 Abs. 1 DDG; BGH I ZR 228/03). -->
 <section id="impressum" class="legal" style="border-top:1px solid var(--line)">
   <div class="wrap legal-inner">
     <div class="legal-head">
@@ -366,7 +359,7 @@ footer{border-top:1px solid var(--line)}
       <div class="legal-label">Kontaktaufnahme per E-Mail</div>
       <div>Bei einer Kontaktaufnahme per E-Mail werden die mitgeteilten Daten (Name, E-Mail-Adresse, Inhalt der Nachricht) ausschließlich zur Bearbeitung der Anfrage verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf den Abschluss oder die Durchführung eines Vertrags gerichtet ist, im Übrigen Art. 6 Abs. 1 lit. f DSGVO. Die E-Mail-Kommunikation wird über Google Workspace (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) abgewickelt; mit Google besteht ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO, und Google ist für etwaige Übermittlungen in die USA nach dem EU-US Data Privacy Framework zertifiziert. Die Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind; gesetzliche Aufbewahrungspflichten bleiben unberührt.</div>
       <div class="legal-label">Kontaktformular</div>
-      <div>Für das Kontaktformular nutzen wir den Dienst Web3Forms des Anbieters Web3Creative (Indien) als Auftragsverarbeiter. Beim Absenden werden die eingegebenen Angaben (Name, E-Mail-Adresse, ggf. Unternehmen, Betreff, Nachricht) über die Server des Anbieters an unser E-Mail-Postfach übermittelt; der Anbieter speichert Übermittlungsdaten nach eigenen Angaben für bis zu drei Jahre. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf den Abschluss oder die Durchführung eines Vertrags gerichtet ist, im Übrigen Art. 6 Abs. 1 lit. f DSGVO. Übermittlungen in Drittländer (u. a. Indien) erfolgen nach Angaben des Anbieters auf Grundlage der EU-Standardvertragsklauseln (Data Processing Agreement). Näheres in der <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Web3Forms</a>. Alternativ können Sie uns jederzeit direkt per E-Mail kontaktieren.</div>
+      <div>Für das Kontaktformular nutzen wir die Forms-API von HubSpot (HubSpot Ireland Limited, 1 Sir John Rogerson's Quay, Dublin 2, Irland - europäische Vertragspartnerin der HubSpot, Inc., USA) als Auftragsverarbeiter. Beim Absenden werden die eingegebenen Angaben (Name, E-Mail-Adresse, Nachricht) an HubSpot übermittelt und dort in unserem Kundenverwaltungssystem gespeichert; die Verarbeitung erfolgt in Rechenzentren in der EU (Deutschland). Dabei werden weder Cookies gesetzt noch Inhalte von HubSpot-Servern in diese Website eingebunden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf den Abschluss oder die Durchführung eines Vertrags gerichtet ist, im Übrigen Art. 6 Abs. 1 lit. f DSGVO. Mit HubSpot besteht ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO; für etwaige Übermittlungen in die USA ist HubSpot, Inc. nach dem EU-US Data Privacy Framework zertifiziert und stützt Übermittlungen ergänzend auf EU-Standardvertragsklauseln. Die Daten werden gelöscht, sobald sie für die Bearbeitung der Anfrage nicht mehr erforderlich sind; gesetzliche Aufbewahrungspflichten bleiben unberührt. Näheres in der <a href="https://legal.hubspot.com/de/privacy-policy" target="_blank" rel="noopener">Datenschutzerklärung von HubSpot</a>. Alternativ können Sie uns jederzeit direkt per E-Mail kontaktieren.</div>
       <div class="legal-label">Keine Cookies, kein Tracking</div>
       <div>Diese Website setzt keine Cookies und verwendet keine Analyse-, Tracking- oder Werbedienste. Schriftarten sind lokal in die Seite eingebettet; beim Seitenaufruf werden keine Inhalte von Drittservern nachgeladen. Eine Übertragung an Dritte findet nur statt, wenn Sie aktiv das Kontaktformular absenden (siehe „Kontaktformular").</div>
       <div class="legal-label">Externe Links</div>
@@ -417,19 +410,53 @@ footer{border-top:1px solid var(--line)}
   });
   var h = location.hash.replace('#', '');
   if (sections[h]) setOpen(h);
-  // Betreff-Vorauswahl: CTA-Links setzen das passende Betreff-Feld im Kontaktformular.
-  var betreffMap = {
-    fallvorstellung: 'Fallvorstellung (vertraulich)',
-    netzwerk: 'Netzwerk',
-    interim: 'Interim-Geschäftsleitung / Beratung'
-  };
-  var betreffSelect = document.getElementById('kf-betreff');
-  document.querySelectorAll('[data-betreff]').forEach(function (a) {
-    a.addEventListener('click', function () {
-      var v = betreffMap[a.getAttribute('data-betreff')];
-      if (betreffSelect && v) betreffSelect.value = v;
+
+  // Kontaktformular: Submission an die HubSpot Forms API (kein Embed-Script, keine Cookies).
+  var HS_URL = 'https://api-eu1.hsforms.com/submissions/v3/integration/submit/148321681/899cf51d-01e0-4478-83f9-d83457cd53a9';
+  var form = document.getElementById('kontakt-form');
+  if (form) {
+    form.hidden = false; // ohne JavaScript bleibt das Formular ausgeblendet (siehe noscript-Hinweis)
+    var danke = document.getElementById('danke');
+    var fehler = document.getElementById('fehler');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.querySelector('.hp').checked) return; // Honeypot
+      var teile = document.getElementById('kf-name').value.trim().split(/\s+/).filter(Boolean);
+      var nachname = teile.length ? teile[teile.length - 1] : '';
+      var vorname = teile.slice(0, -1).join(' ');
+      var felder = [
+        { objectTypeId: '0-1', name: 'email', value: document.getElementById('kf-email').value.trim() },
+        { objectTypeId: '0-1', name: 'lastname', value: nachname },
+        { objectTypeId: '0-1', name: 'message', value: document.getElementById('kf-nachricht').value.trim() }
+      ];
+      if (vorname) felder.push({ objectTypeId: '0-1', name: 'firstname', value: vorname });
+      var btn = form.querySelector('button[type="submit"]');
+      var btnText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Wird gesendet …';
+      fetch(HS_URL, {
+        method: 'POST',
+        mode: 'cors',
+        credentials: 'omit',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fields: felder,
+          context: { pageUri: 'https://h-don.de/', pageName: 'H-DON · Kontakt' }
+        })
+      }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        form.reset();
+        fehler.hidden = true;
+        danke.hidden = false;
+        danke.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }).catch(function () {
+        fehler.hidden = false;
+      }).then(function () {
+        btn.disabled = false;
+        btn.textContent = btnText;
+      });
     });
-  });
+  }
 })();
 </script>
 
