@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>H-DON · Martin Nagelsdiek — Finanzierung und Führung im regulierten Finanzsektor</title>
+<title>H-DON · Martin Nagelsdiek - Finanzierung und Führung im regulierten Finanzsektor</title>
 <meta name="description" content="Finanzierungslösungen für Insolvenzverwalter, Debt Advisors und Private Equity. Interim-Geschäftsleitung (§ 25c KWG) und Beratung für Finanzinstitute: Risikomanagement, Regulatory Compliance, Anti-Financial-Crime.">
 <meta property="og:title" content="H-DON · Martin Nagelsdiek">
 <meta property="og:description" content="Finanzierung für Restrukturierungs- und Insolvenzmandate. Interim-Geschäftsleitung und Beratung für Finanzinstitute.">
@@ -83,13 +83,28 @@ h2{font-size:32px;font-weight:600;letter-spacing:-.015em;margin:0 0 22px -2px;te
 .inst-card .body{font-size:16px;line-height:1.65;color:var(--body);text-wrap:pretty}
 
 /* Profil */
-.profil-grid{display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start}
-.portrait{width:340px;height:425px;max-width:100%;background:var(--bg-alt);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--label);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
 .profil-text{display:flex;flex-direction:column;gap:22px}
 .meta-row{display:flex;align-items:baseline;gap:14px;border-top:1px solid var(--line);padding-top:18px;margin-top:6px;font-size:16px;color:var(--body);flex-wrap:wrap}
 .meta-row a{color:var(--accent);text-decoration:none}
 .meta-row a:hover{color:var(--accent-dark)}
 .dot{color:var(--accent)}
+
+/* Kontaktformular */
+.kontakt-form{max-width:700px}
+.hp{display:none !important}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
+.form-field{display:flex;flex-direction:column;gap:8px}
+.form-field-full{grid-column:1 / -1}
+.form-field label{font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--label)}
+.form-field input,.form-field select,.form-field textarea{font-family:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:2px;padding:12px 14px;width:100%}
+.form-field textarea{resize:vertical;min-height:140px}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--accent)}
+.form-footer{display:flex;align-items:center;gap:24px;margin-top:28px;flex-wrap:wrap}
+.form-footer .btn-primary{border:0;cursor:pointer;font-family:inherit}
+.form-hinweis{font-size:13.5px;line-height:1.5;color:var(--muted);max-width:420px}
+.form-alt{font-size:16px;color:var(--body);margin:30px 0 0}
+#danke{display:none;max-width:700px;background:var(--bg-alt);border:1px solid var(--line);border-left:3px solid var(--accent);padding:16px 20px;font-size:16px;color:var(--body);margin:0 0 30px}
+#danke:target{display:block}
 
 /* Legal sections (in-page, toggled via footer) */
 [hidden]{display:none !important}
@@ -119,7 +134,7 @@ footer{border-top:1px solid var(--line)}
   .steps{grid-template-columns:1fr;gap:26px}
   .cols-2{grid-template-columns:1fr;gap:28px}
   .inst-cols{grid-template-columns:1fr;gap:36px}
-  .profil-grid{grid-template-columns:1fr;gap:36px}
+  .form-grid{grid-template-columns:1fr;gap:18px}
   .legal-grid{grid-template-columns:1fr;gap:8px 0}
   .legal-grid > div:not(.legal-label){margin-bottom:16px}
   .legal-inner{padding:48px 0 56px}
@@ -139,7 +154,7 @@ footer{border-top:1px solid var(--line)}
       <a class="nav-link" href="#netzwerk">Netzwerk</a>
       <a class="nav-link" href="#institute">Institute</a>
       <a class="nav-link" href="#profil">Profil</a>
-      <a class="nav-cta" href="mailto:martin.nagelsdiek@h-don.de">Kontakt</a>
+      <a class="nav-cta" href="#kontakt">Kontakt</a>
     </nav>
   </div>
 </header>
@@ -153,9 +168,9 @@ footer{border-top:1px solid var(--line)}
     <!-- Alternative Headline (Variante B aus dem Design):
     <h1>Finanzierungslösungen für Insolvenzverwalter und Debt Advisors. Führung für Finanzinstitute.</h1>
     -->
-    <p class="lead">Ich berate Insolvenzverwalter, Debt Advisory Firmen und Private Equity bei der Finanzierung ihrer Mandate: Ich stelle Kontakte her, verhandle die Finanzengagements und unterstütze bei der Implementierung. Zuvor habe ich ein Hamburger Factoring-Institut mit BaFin-Erlaubnis in den Funktionen Risikomanagement, Risikocontrolling, Interne Revision, Anti Financial Crime und Regulatory Compliance aufgebaut — heute berate ich Finanzinstitute genau in diesen Bereichen.</p>
+    <p class="lead">Ich berate Insolvenzverwalter, Debt Advisory Firmen und Private Equity bei der Finanzierung ihrer Mandate: Ich stelle Kontakte her, verhandle die Finanzengagements und unterstütze bei der Implementierung. Zuvor habe ich ein Hamburger Factoring-Institut mit BaFin-Erlaubnis in den Funktionen Risikomanagement, Risikocontrolling, Interne Revision, Anti Financial Crime und Regulatory Compliance aufgebaut - heute berate ich Finanzinstitute genau in diesen Bereichen.</p>
     <div class="hero-ctas">
-      <a class="btn-primary" href="mailto:martin.nagelsdiek@h-don.de?subject=Fallvorstellung%20%28vertraulich%29">Kontakt aufnehmen</a>
+      <a class="btn-primary" href="#kontakt" data-betreff="fallvorstellung">Kontakt aufnehmen</a>
       <a class="hero-sec" href="#institute">Für Institute ↓</a>
     </div>
   </div>
@@ -168,11 +183,11 @@ footer{border-top:1px solid var(--line)}
     <div style="margin-top:36px">
       <div class="label" style="margin-bottom:14px">Typische Konstellationen</div>
       <div class="dash-list">
-        <div><span class="d">–</span><span>Fortführung im vorläufigen oder eröffneten Verfahren</span></div>
-        <div><span class="d">–</span><span>gekündigte Factoring- oder Kreditlinien und benötigte Anschlussfinanzierung</span></div>
-        <div><span class="d">–</span><span>hohe Debitorenkonzentration</span></div>
-        <div><span class="d">–</span><span>Finanzierung übertragender Sanierungen</span></div>
-        <div><span class="d">–</span><span>Working Capital in Carve-outs und Nachfolgesituationen</span></div>
+        <div><span class="d">-</span><span>Fortführung im vorläufigen oder eröffneten Verfahren</span></div>
+        <div><span class="d">-</span><span>gekündigte Factoring- oder Kreditlinien und benötigte Anschlussfinanzierung</span></div>
+        <div><span class="d">-</span><span>hohe Debitorenkonzentration</span></div>
+        <div><span class="d">-</span><span>Finanzierung übertragender Sanierungen</span></div>
+        <div><span class="d">-</span><span>Working Capital in Carve-outs und Nachfolgesituationen</span></div>
       </div>
     </div>
     <div class="products">
@@ -198,7 +213,7 @@ footer{border-top:1px solid var(--line)}
       </div>
     </div>
     <div style="margin-top:46px">
-      <a class="link-cta" href="mailto:martin.nagelsdiek@h-don.de?subject=Fallvorstellung%20%28vertraulich%29">Fall vertraulich vorstellen →</a>
+      <a class="link-cta" href="#kontakt" data-betreff="fallvorstellung">Fall vertraulich vorstellen →</a>
     </div>
   </div>
 </section>
@@ -219,14 +234,14 @@ footer{border-top:1px solid var(--line)}
     </div>
     <div class="inline-row">
       <span class="plain">Aufnahme nach persönlichem Gespräch.</span>
-      <a class="link-cta" href="mailto:martin.nagelsdiek@h-don.de?subject=Netzwerk">Kontakt aufnehmen →</a>
+      <a class="link-cta" href="#kontakt" data-betreff="netzwerk">Kontakt aufnehmen →</a>
     </div>
   </div>
 </section>
 
 <section id="institute">
   <div class="wrap section-inner">
-    <h2 style="max-width:26ch">Für Institute — Interim-Geschäftsleitung &amp; Beratung</h2>
+    <h2 style="max-width:26ch">Für Institute - Interim-Geschäftsleitung &amp; Beratung</h2>
     <p class="copy" style="margin-bottom:40px">Finanzinstitute unterstütze ich, wenn KWG-Erfahrung kurzfristig benötigt wird.</p>
     <div class="inst-cols">
       <div class="inst-card">
@@ -237,15 +252,15 @@ footer{border-top:1px solid var(--line)}
         <div class="title">Beratung</div>
         <div class="body">Schwerpunkte:</div>
         <div class="dash-list">
-          <div><span class="d">–</span><span>MaRisk-konforme Aufbau- und Ablauforganisation</span></div>
-          <div><span class="d">–</span><span>Restrukturierung und geordneter Abbau von Kreditportfolios</span></div>
-          <div><span class="d">–</span><span>Auslagerungsmanagement</span></div>
-          <div><span class="d">–</span><span>Geldwäscheprävention und Anti-Financial Crime (MLRO-Praxis)</span></div>
+          <div><span class="d">-</span><span>MaRisk-konforme Aufbau- und Ablauforganisation</span></div>
+          <div><span class="d">-</span><span>Restrukturierung und geordneter Abbau von Kreditportfolios</span></div>
+          <div><span class="d">-</span><span>Auslagerungsmanagement</span></div>
+          <div><span class="d">-</span><span>Geldwäscheprävention und Anti-Financial Crime (MLRO-Praxis)</span></div>
         </div>
       </div>
     </div>
     <div style="margin-top:46px">
-      <a class="link-cta" href="mailto:martin.nagelsdiek@h-don.de?subject=Interim%20%2F%20Beratung">Anfrage stellen →</a>
+      <a class="link-cta" href="#kontakt" data-betreff="interim">Anfrage stellen →</a>
     </div>
   </div>
 </section>
@@ -253,18 +268,59 @@ footer{border-top:1px solid var(--line)}
 <section id="profil" style="border-top:1px solid var(--line)">
   <div class="wrap section-inner">
     <h2 style="margin-bottom:36px">Profil</h2>
-    <div class="profil-grid">
-      <div class="portrait" role="img" aria-label="Platzhalter für Porträtfoto">Porträtfoto</div>
-      <!-- Foto einsetzen: obige div ersetzen durch
-      <img class="portrait" src="portrait.jpg" alt="Porträtfoto Martin Nagelsdiek" style="object-fit:cover"> -->
-      <div class="profil-text">
-        <p class="copy">Bei einem Hamburger Finanzdienstleistungsinstitut mit BaFin-Erlaubnis für das Factoringgeschäft habe ich zunächst als Chief Revenue Officer das Neugeschäft aufgebaut, anschließend als Chief Risk Officer und Geschäftsleiter gem. § 25c KWG Risiko und Marktfolge verantwortet, einschließlich der Funktion des Geldwäschebeauftragten (MLRO). Aktuell bin ich europaweit als Geschäftsführer im Bereich Trade Finance und Payments mandatiert.</p>
-        <p class="copy">Mein Studium verbindet Wirtschaftspsychologie, Betriebswirtschaftslehre und Wirtschaftsrecht. In der Praxis ergänzen sich die drei Felder: Verhaltensmuster in der Geldwäscheprävention, betriebswirtschaftliche Beurteilung im Finanzierungsgeschäft, rechtliche Einordnung in Vertrags- und Aufsichtsfragen.</p>
-        <div class="meta-row">
-          <span>München</span><span class="dot">·</span><span>Mandate bundesweit</span><span class="dot">·</span><a href="https://www.linkedin.com/in/nagelsdiek" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
+    <div class="profil-text" style="max-width:700px">
+      <p class="copy">Bei einem Hamburger Finanzdienstleistungsinstitut mit BaFin-Erlaubnis für das Factoringgeschäft habe ich zunächst als Chief Revenue Officer das Neugeschäft aufgebaut, anschließend als Chief Risk Officer und Geschäftsleiter gem. § 25c KWG Risiko und Marktfolge verantwortet, einschließlich der Funktion des Geldwäschebeauftragten (MLRO). Aktuell bin ich europaweit als Geschäftsführer im Bereich Trade Finance und Payments mandatiert.</p>
+      <div class="meta-row">
+        <span>München</span><span class="dot">·</span><span>Mandate europaweit</span><span class="dot">·</span><a href="https://www.linkedin.com/in/nagelsdiek" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="kontakt" style="border-top:1px solid var(--line)">
+  <div class="wrap section-inner">
+    <h2>Kontakt</h2>
+    <p class="copy" style="margin-bottom:34px">Eine kurze Nachricht mit einer Fallübersicht genügt. Vertraulichkeit ist selbstverständlich; auf Wunsch schließen wir vor Detailgesprächen eine Vertraulichkeitsvereinbarung.</p>
+    <div id="danke">Vielen Dank für Ihre Nachricht - ich melde mich zeitnah bei Ihnen.</div>
+    <form class="kontakt-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="ENTFERNT-WEB3FORMS-KEY">
+      <input type="hidden" name="subject" value="Neue Anfrage über h-don.de">
+      <input type="hidden" name="from_name" value="h-don.de Kontaktformular">
+      <input type="hidden" name="redirect" value="https://h-don.de/#danke">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="kf-name">Name*</label>
+          <input id="kf-name" type="text" name="name" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="kf-email">E-Mail*</label>
+          <input id="kf-email" type="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-field">
+          <label for="kf-firma">Unternehmen / Kanzlei</label>
+          <input id="kf-firma" type="text" name="unternehmen" autocomplete="organization">
+        </div>
+        <div class="form-field">
+          <label for="kf-betreff">Betreff</label>
+          <select id="kf-betreff" name="betreff">
+            <option value="Fallvorstellung (vertraulich)">Fallvorstellung (vertraulich)</option>
+            <option value="Netzwerk">Netzwerk</option>
+            <option value="Interim-Geschäftsleitung / Beratung">Interim-Geschäftsleitung / Beratung</option>
+            <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
+          </select>
+        </div>
+        <div class="form-field form-field-full">
+          <label for="kf-nachricht">Nachricht*</label>
+          <textarea id="kf-nachricht" name="nachricht" rows="6" required></textarea>
+        </div>
+      </div>
+      <div class="form-footer">
+        <button type="submit" class="btn-primary">Nachricht senden</button>
+        <span class="form-hinweis">Mit dem Absenden werden Ihre Angaben zur Bearbeitung der Anfrage verarbeitet - Details in der <a href="#datenschutz" data-legal-open="datenschutz">Datenschutzerklärung</a>.</span>
+      </div>
+    </form>
+    <p class="form-alt">Oder direkt per E-Mail: <a href="mailto:martin.nagelsdiek@h-don.de">martin.nagelsdiek@h-don.de</a></p>
   </div>
 </section>
 
@@ -309,8 +365,10 @@ footer{border-top:1px solid var(--line)}
       <div>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA („GitHub"). Beim Aufruf der Website erhebt GitHub technisch bedingt Ihre IP-Adresse und speichert sie nach eigenen Angaben zu Sicherheitszwecken in Server-Logs; auf diese Verarbeitung haben wir keinen Einfluss. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren und stabilen Bereitstellung der Website). GitHub verarbeitet Daten auch in den USA; GitHub ist nach dem EU-US Data Privacy Framework zertifiziert und stützt Übermittlungen ergänzend auf Standardvertragsklauseln der EU-Kommission. Näheres in der <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a>.</div>
       <div class="legal-label">Kontaktaufnahme per E-Mail</div>
       <div>Bei einer Kontaktaufnahme per E-Mail werden die mitgeteilten Daten (Name, E-Mail-Adresse, Inhalt der Nachricht) ausschließlich zur Bearbeitung der Anfrage verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf den Abschluss oder die Durchführung eines Vertrags gerichtet ist, im Übrigen Art. 6 Abs. 1 lit. f DSGVO. Die E-Mail-Kommunikation wird über Google Workspace (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) abgewickelt; mit Google besteht ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO, und Google ist für etwaige Übermittlungen in die USA nach dem EU-US Data Privacy Framework zertifiziert. Die Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind; gesetzliche Aufbewahrungspflichten bleiben unberührt.</div>
+      <div class="legal-label">Kontaktformular</div>
+      <div>Für das Kontaktformular nutzen wir den Dienst Web3Forms des Anbieters Web3Creative (Indien) als Auftragsverarbeiter. Beim Absenden werden die eingegebenen Angaben (Name, E-Mail-Adresse, ggf. Unternehmen, Betreff, Nachricht) über die Server des Anbieters an unser E-Mail-Postfach übermittelt; der Anbieter speichert Übermittlungsdaten nach eigenen Angaben für bis zu drei Jahre. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf den Abschluss oder die Durchführung eines Vertrags gerichtet ist, im Übrigen Art. 6 Abs. 1 lit. f DSGVO. Übermittlungen in Drittländer (u. a. Indien) erfolgen nach Angaben des Anbieters auf Grundlage der EU-Standardvertragsklauseln (Data Processing Agreement). Näheres in der <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Web3Forms</a>. Alternativ können Sie uns jederzeit direkt per E-Mail kontaktieren.</div>
       <div class="legal-label">Keine Cookies, kein Tracking</div>
-      <div>Diese Website setzt keine Cookies und verwendet keine Analyse-, Tracking- oder Werbedienste. Schriftarten sind lokal in die Seite eingebettet; beim Seitenaufruf werden keine Inhalte von Drittservern nachgeladen.</div>
+      <div>Diese Website setzt keine Cookies und verwendet keine Analyse-, Tracking- oder Werbedienste. Schriftarten sind lokal in die Seite eingebettet; beim Seitenaufruf werden keine Inhalte von Drittservern nachgeladen. Eine Übertragung an Dritte findet nur statt, wenn Sie aktiv das Kontaktformular absenden (siehe „Kontaktformular").</div>
       <div class="legal-label">Externe Links</div>
       <div>Diese Website enthält Links zu externen Websites (z. B. LinkedIn). Durch den bloßen Besuch dieser Seite werden keine Daten an die verlinkten Anbieter übertragen; beim Anklicken gelten die Datenschutzhinweise des jeweiligen Anbieters.</div>
       <div class="legal-label">Ihre Rechte</div>
@@ -358,15 +416,19 @@ footer{border-top:1px solid var(--line)}
     });
   });
   var h = location.hash.replace('#', '');
-  if (sections[h]) {
-    setOpen(h);
-    // Beim direkten Aufruf mit #impressum/#datenschutz greift scrollIntoView
-    // erst nach dem initialen Scroll-Handling des Browsers zuverlässig.
-    setTimeout(function () { sections[h].scrollIntoView({ block: 'start' }); }, 60);
-  }
-  window.addEventListener('hashchange', function () {
-    var k = location.hash.replace('#', '');
-    if (sections[k]) setOpen(k);
+  if (sections[h]) setOpen(h);
+  // Betreff-Vorauswahl: CTA-Links setzen das passende Betreff-Feld im Kontaktformular.
+  var betreffMap = {
+    fallvorstellung: 'Fallvorstellung (vertraulich)',
+    netzwerk: 'Netzwerk',
+    interim: 'Interim-Geschäftsleitung / Beratung'
+  };
+  var betreffSelect = document.getElementById('kf-betreff');
+  document.querySelectorAll('[data-betreff]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var v = betreffMap[a.getAttribute('data-betreff')];
+      if (betreffSelect && v) betreffSelect.value = v;
+    });
   });
 })();
 </script>
