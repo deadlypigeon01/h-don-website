@@ -131,3 +131,18 @@ footer{border-top:1px solid var(--line)}
 @media (max-width:720px){
   .nav-link{display:none}
 }
+
+/* --- Utility-Klassen (ersetzen frühere inline style="" Attribute, CSP-konform) --- */
+.u-border-top-1px-solid-var-line-2d94 { border-top:1px solid var(--line); }
+.u-margin-top-36px-d34d { margin-top:36px; }
+.u-margin-bottom-14px-2b58 { margin-bottom:14px; }
+.u-margin-bottom-18px-905d { margin-bottom:18px; }
+.u-margin-top-46px-1eb6 { margin-top:46px; }
+.u-margin-bottom-30px-3b4f { margin-bottom:30px; }
+.u-max-width-26ch-ca03 { max-width:26ch; }
+.u-margin-bottom-40px-8c92 { margin-bottom:40px; }
+.u-margin-bottom-36px-a5ad { margin-bottom:36px; }
+.u-max-width-700px-bcaa { max-width:700px; }
+.u-margin-bottom-34px-28e5 { margin-bottom:34px; }
+.u-margin-0-0-0-2px-5990 { margin:0 0 0 -2px; }
+.u-margin-6px-0-4px-padding-14px-16px-borde-b903 { margin:6px 0 4px; padding:14px 16px; border:1px solid var(--line); border-radius:4px; }

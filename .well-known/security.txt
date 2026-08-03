@@ -1,0 +1,6 @@
+# Sicherheitshinweise zu h-don.de / RFC 9116
+Contact: mailto:security@h-don.de
+Contact: mailto:martin.nagelsdiek@h-don.de
+Expires: 2027-08-03T00:00:00.000Z
+Preferred-Languages: de, en
+Canonical: https://h-don.de/.well-known/security.txt
